@@ -10,7 +10,7 @@ function findResourceById(resource_id) {
 
 async function createResource(resource) {
     const [resource_id] = await db('resources').insert(resource);
-    return findResourceById(resource_id)
+    return findResourceById(resource_id);
 }
 
 module.exports = {
