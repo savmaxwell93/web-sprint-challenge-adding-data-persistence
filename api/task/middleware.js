@@ -1,4 +1,3 @@
-const db = require('../../data/dbConfig');
 const { taskSchema } = require('../schemas/index');
 
 const checkTaskPayload = async (req, res, next) => {
