@@ -101,16 +101,27 @@ Build an API inside the `api` folder with endpoints for:
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `main` branch on Github.
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [x] Submit via Codegrade by pushing commits to your `main` branch on Github.
+- [x] Check Codegrade before the deadline to compare its results against your local tests.
+- [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [x] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+
+  SQL is a language that relational databases can be written in as well as communicated with via CRUD queries.
+
 2. Why do tables need a Primary Key?
+
+  Primary keys ensure row-level accessibility in order to query each table row individually.
+
 3. What is the name given to a table column that references the Primary Key on another table?
+
+  Foreign Key
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+  Another table would be required to connect the two tables together using foreign keys.
