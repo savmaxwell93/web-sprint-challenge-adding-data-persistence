@@ -15,7 +15,10 @@ const resourceSchema = yup.object({
 const taskSchema = yup.object({
     task_description: yup
         .string()
-        .required('task description is required')
+        .required('task description is required'),
+    project_id: yup
+        .number()
+        .required('must enter project_id')
 })
 
 module.exports = {

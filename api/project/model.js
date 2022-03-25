@@ -2,26 +2,26 @@ const db = require('../../data/dbConfig');
 const convertToBoolean = require('../shared-model/shared-model');
 
 async function findProjects() {
-    const results = await db('projects');
+    const projects = await db('projects');
 
-    results.forEach((result) => {
-        convertToBoolean(result, 'project_completed')
+    projects.forEach((project) => {
+        convertToBoolean(project, 'project_completed')
     })
 
-    return results;
+    return projects;
 }
 
 async function findProjectById(project_id) {
-    const result = await db('projects').where({ project_id }).first();
+    const project = await db('projects').where({ project_id }).first();
 
-    convertToBoolean(result, 'project_completed')
+    convertToBoolean(project, 'project_completed');
 
-    return result;
+    return project;
 }
 
 async function createProject(project) {
     const [project_id] = await db('projects').insert(project);
-    
+
     return findProjectById(project_id);
 }
 
